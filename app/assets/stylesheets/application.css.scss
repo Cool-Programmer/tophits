@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.clrwh
+{
+  color: #fff !important;
+}
+
+body
+{
+  background: #fff url('background.jpg')
+}
+
+.navbar-default
+{
+  background: #E6393B;
+  border: none !important;
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a
+{
+  color: #000;
+  font-weight: bold;
+}
+.navbar-default .navbar-brand
+{
+  color: #000;
+}
+
+.review_title
+{
+  margin: 0 0 20px 0;
+}
+
+.reviews
+{
+  padding: 15px 0;
+  border-bottom: 1px solid #eaeaea;
+  .star-rating
+  {
+    padding-bottom: 8px;
+  }
+}
