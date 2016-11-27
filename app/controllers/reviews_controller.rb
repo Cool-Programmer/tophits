@@ -7,9 +7,6 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
-  def edit
-  end
-
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
@@ -21,18 +18,6 @@ class ReviewsController < ApplicationController
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def update
-    respond_to do |format|
-      if @review.update(review_params)
-        format.html { redirect_to @movie, notice: 'Review was successfully updated.' }
-        format.json { render :show, status: :ok, location: @review }
-      else
-        format.html { render :edit }
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
     end

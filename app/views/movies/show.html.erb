@@ -41,6 +41,7 @@
             <div class="reviews">
               <div class="star-rating" data-score=<%= review.rating %>></div>
               <p><%= review.comment %></p>
+              <span class="small text-muted">by <em><%= review.user.email %></em></span>
             </div>
           <% end %>
         <% end %>
